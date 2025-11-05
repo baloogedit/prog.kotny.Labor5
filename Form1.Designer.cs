@@ -34,6 +34,8 @@
             this.menuStripSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToExistingStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
@@ -48,14 +50,17 @@
             this.menuStripSearch});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1562, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1356, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuStripAdd
             // 
+            this.menuStripAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewProductToolStripMenuItem,
+            this.addToExistingStockToolStripMenuItem});
             this.menuStripAdd.Name = "menuStripAdd";
-            this.menuStripAdd.Size = new System.Drawing.Size(176, 38);
+            this.menuStripAdd.Size = new System.Drawing.Size(176, 36);
             this.menuStripAdd.Text = "&Add Products";
             this.menuStripAdd.Click += new System.EventHandler(this.menuStripAdd_Click);
             // 
@@ -69,16 +74,16 @@
             // menuStripSearch
             // 
             this.menuStripSearch.Name = "menuStripSearch";
-            this.menuStripSearch.Size = new System.Drawing.Size(204, 36);
+            this.menuStripSearch.Size = new System.Drawing.Size(204, 38);
             this.menuStripSearch.Text = "&Search Products";
             this.menuStripSearch.Click += new System.EventHandler(this.menuStripSearch_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRefresh.Location = new System.Drawing.Point(0, 751);
+            this.btnRefresh.Location = new System.Drawing.Point(0, 625);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(1562, 56);
+            this.btnRefresh.Size = new System.Drawing.Size(1356, 56);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -92,14 +97,29 @@
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 82;
             this.dgvProducts.RowTemplate.Height = 33;
-            this.dgvProducts.Size = new System.Drawing.Size(1562, 711);
+            this.dgvProducts.Size = new System.Drawing.Size(1356, 585);
             this.dgvProducts.TabIndex = 2;
+            this.dgvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellDoubleClick);
+            // 
+            // addNewProductToolStripMenuItem
+            // 
+            this.addNewProductToolStripMenuItem.Name = "addNewProductToolStripMenuItem";
+            this.addNewProductToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addNewProductToolStripMenuItem.Text = "&AddNewProduct";
+            this.addNewProductToolStripMenuItem.Click += new System.EventHandler(this.menuStripAddNew_Click);
+            // 
+            // addToExistingStockToolStripMenuItem
+            // 
+            this.addToExistingStockToolStripMenuItem.Name = "addToExistingStockToolStripMenuItem";
+            this.addToExistingStockToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.addToExistingStockToolStripMenuItem.Text = "&AddToExistingStock";
+            this.addToExistingStockToolStripMenuItem.Click += new System.EventHandler(this.menuStripAddExisting_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1562, 807);
+            this.ClientSize = new System.Drawing.Size(1356, 681);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.menuStrip1);
@@ -123,6 +143,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuStripSearch;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.ToolStripMenuItem addNewProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToExistingStockToolStripMenuItem;
     }
 }
 
